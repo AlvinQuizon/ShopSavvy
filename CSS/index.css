@@ -1,4 +1,4 @@
-header {
+.index-header {
   background: #F28322;
   color: white;
   padding-left: 15px;
@@ -12,5 +12,20 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+}
+
+.website-logo {
+  width: 8em;
+}
+
+@media (max-width: 800px) {
+  .index-header-left-section {
+    width: unset;
   }
+}
+
+@media (max-width: 575px) {
+  .website-logo {
+    display: none;
+  }
+}
