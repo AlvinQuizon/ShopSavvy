@@ -1,7 +1,7 @@
 .index-header {
-  background-color: #F28322;
+  background-color: #131921;
   color: white;
-  
+ 
 
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 8rem;
 }
 
 .index-header-left-section {
@@ -46,7 +46,7 @@
 
 .index-logo {
   width: 100px;
-  margin-top: 5px;
+  
 }
 
 .index-mobile-logo {
@@ -63,6 +63,10 @@
     height: 35px;
     margin-top: 5px;
     padding-right: 0;
+  }
+
+  .navbar-toggler {
+    background: #F5F5F5;
   }
 }
 

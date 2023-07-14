@@ -14,43 +14,14 @@ fetch('https://fakestoreapi.com/products')
     for (let product of products) {
       const productDiv = document.createElement('div');
       productDiv.innerHTML = `
-        <div class="products-grid container mt-5 pt-4">
-          <div class="product-container rounded row col-lg-4 border border-dark">
-            <div class="product-image-container">
-            <img src="${product.image}" class="card-img-top rounded mx-auto d-block mt-3" style="width: 8rem;">
-            </div>
-
-            <div class="product-name h5 mt-2 limit-text-to-2-lines">
-              ${product.title}
-            </div>
-
-            <div class="product-rating-container h6">
-              <p><span class="card-text"><span class="fw-bold">Rating:</span> ${product.rating.rate},</span></p>
-              <p><span class="card-text"><span class="fw-bold">Sold: </span> ${product.rating.count}</span></p>
-              <p class="fw-bold">Price: ${product.price}</p>
-            </div>
-
-            <div class="product-quantity-container">
-              <div class="mb-2 fw-bold">Quantity:</div>
-                <select>
-                  <option selected value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-            </div>
-
-            <div class="product-spacer"></div>
-
-            <div class="added-to-cart">
-              <a href="#" class="btn btn-primary rounded-pill mb-4 mx-auto col-6 d-block">Add to Cart</a>
-            </div>
+        <div class="border border-dark bg-light rounded text-center" style="height: 27rem; width: 20em;">
+          <img src="${product.image}" class="img-thumbnail mt-4 mb-3" style="height: 8rem; width: 6rem;">
+          <div class="card-body text-start ps-2 pe-2">
+            <h5 class="card-title text-dark fw-bold mb-3">${product.title}</h5>
+            <p><span class="fw-bold">Ratings: <span>${product.rating.rate}, </span></span>
+            <span class="fw-bold">${product.rating.count} <span>Sold</span></span></p>
+            <p><span class="fw-bold">Price: <span>${product.price}, </span></span></p>
+            <span class="align-baseline"><a href="#" class="btn btn-lg btn-primary justify-content-center d-flex">View Details</a></span>
           </div>
         </div>`;
 

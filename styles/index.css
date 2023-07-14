@@ -1,0 +1,13 @@
+main {
+    background: #F4BF1B;
+}
+
+#product-lists {
+    padding-top: 10rem;
+}
+
+@media (max-width: 575px) {
+    #product-lists {
+        margin-left: 5px;
+    }
+}
