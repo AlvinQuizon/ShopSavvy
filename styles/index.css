@@ -1,5 +1,5 @@
-main {
-    background: #F4BF1B;
+body {
+  background-color: #F3DBB7;
 }
 
 #product-lists {
@@ -10,10 +10,6 @@ main {
     #product-lists {
         margin-left: 5px;
     }
-}
-
-#single-product-lists {
-    padding-top: 10rem;
 }
 
 .products-grid {
