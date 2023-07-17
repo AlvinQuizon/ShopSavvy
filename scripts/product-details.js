@@ -1,7 +1,6 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productId = urlParams.get('productId');
-console.log(productId);
 
 fetch(`https://fakestoreapi.com/products/${productId}`)
   .then(res => res.json())
@@ -31,6 +30,4 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
 
     const productSold = document.getElementById('product-count');
     productSold.textContent = data.rating.count;
-
-
-  });
+});
