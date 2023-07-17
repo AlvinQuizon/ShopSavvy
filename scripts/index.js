@@ -14,31 +14,33 @@ fetch('https://fakestoreapi.com/products')
     for (let product of products) {
       const productDiv = document.createElement('div');
       productDiv.innerHTML = `
-        <div class="border border-dark bg-light rounded text-center" style="height: 27rem; width: 20em;">
-          <img src="${product.image}" class="img-thumbnail mt-4 mb-3" style="height: 8rem; width: 6rem;">
-          <div class="card-body text-start ps-2 pe-2">
-            <h5 class="card-title text-dark fw-bold mb-3">${product.title}</h5>
-            <p><span class="fw-bold">Ratings: <span>${product.rating.rate}, </span></span>
-            <span class="fw-bold">${product.rating.count} <span>Sold</span></span></p>
-            <p><span class="fw-bold">Price: <span>${product.price}, </span></span></p>
-            <a href="./single-product.html?productId=${product.id}" class="btn btn-primary mt-3 rounded mx-auto d-grid gap-2 col-8 col-lg-6 d-block">View Details</a>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <a href="./product-details.html?productId=${product.id}">
+              <div class="img-box">
+                <img src="${product.image}" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                ${product.title}
+                </h6>
+                <h6>
+                  Price
+                  <span>
+                    $${product.price}
+                  </span>
+                </h6>
+              </div>
+              <div class="new">
+                <span>
+                  New
+                </span>
+              </div>
+            </a>
           </div>
-        </div>`;
-
-    const productImage = document.createElement('img')
-
-    const productCategory = document.createElement('h4');
-
-    const productTitle = document.createElement('h4');
-
-    const productDescription = document.createElement('p');
-
-    const productPrice = document.createElement('p');
-
-    const productRating = document.createElement('p');
-
-    productContainer.appendChild(productDiv);
-
-    productDiv.appendChild(productRating);
-  }
+        </div>
+      `;
+    
+        productContainer.appendChild(productDiv);
+    }
   });
