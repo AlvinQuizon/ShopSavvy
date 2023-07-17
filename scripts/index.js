@@ -15,12 +15,12 @@ fetch('https://fakestoreapi.com/products')
       const productDiv = document.createElement('div');
       productDiv.setAttribute('class', 'grid col-sm-6 col-md-6 col-lg-3');
       productDiv.innerHTML = `
-        <div class="box">
+        <div class="box product-container">
           <a href="./product-details.html?productId=${product.id}">
-            <div class="img-box">
-              <img src="${product.image}" alt="">
+            <div class="img-box product-image-container">
+              <img src="${product.image}" class="product-image">
             </div>
-            <div class="detail-box">
+            <div class="detail-box product-name  overflow-hidden">
               <h6>
               ${product.title}
               </h6>

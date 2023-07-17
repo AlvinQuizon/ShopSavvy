@@ -1,7 +1,8 @@
-.index-header {
-  background-color: #131921;
+.amazon-header {
+  background-color: rgb(19, 25, 33);
   color: white;
- 
+  padding-left: 15px;
+  padding-right: 15px;
 
   display: flex;
   align-items: center;
@@ -11,22 +12,15 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 8rem;
+  height: 60px;
 }
 
-.index-header-left-section {
+.amazon-header-left-section {
   width: 180px;
 }
 
-@media (min-width: 575px) {
-.index-header {
-  padding-left: 30px;
-  padding-right: 15px;
-  }
-}
-
 @media (max-width: 800px) {
-  .index-header-left-section {
+  .amazon-header-left-section {
     width: unset;
   }
 }
@@ -44,33 +38,28 @@
   border: 1px solid white;
 }
 
-.index-logo {
+.amazon-logo {
   width: 100px;
-  
+  margin-top: 5px;
 }
 
-.index-mobile-logo {
+.amazon-mobile-logo {
   display: none;
 }
 
 @media (max-width: 575px) {
-  .index-logo {
+  .amazon-logo {
     display: none;
   }
 
-  .index-mobile-logo {
+  .amazon-mobile-logo {
     display: block;
     height: 35px;
     margin-top: 5px;
-    padding-right: 0;
-  }
-
-  .navbar-toggler {
-    background: #F5F5F5;
   }
 }
 
-.index-header-middle-section {
+.amazon-header-middle-section {
   flex: 1;
   max-width: 850px;
   margin-left: 10px;
@@ -92,10 +81,10 @@
 }
 
 .search-button {
-  background-color: #EBEB12;
+  background-color: rgb(254, 189, 105);
   border: none;
   width: 45px;
-  height: 38px;
+  height: 40px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   flex-shrink: 0;
@@ -107,7 +96,7 @@
   margin-top: 3px;
 }
 
-.index-header-right-section {
+.amazon-header-right-section {
   width: 180px;
   flex-shrink: 0;
   display: flex;
@@ -118,11 +107,15 @@
   color: white;
 }
 
+.returns-text {
+  display: block;
+  font-size: 13px;
+}
+
 .orders-text {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
-  padding-right: 0.5em;
 }
 
 .cart-link {
@@ -137,13 +130,14 @@
 }
 
 .cart-text {
+  margin-top: 12px;
   font-size: 15px;
   font-weight: 700;
 }
 
 .cart-quantity {
-  color: white;
-  font-size: 18px;
+  color: rgb(240, 136, 4);
+  font-size: 16px;
   font-weight: 700;
 
   position: absolute;
@@ -153,4 +147,3 @@
   width: 26px;
   text-align: center;
 }
-
