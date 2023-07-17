@@ -21,7 +21,7 @@ fetch('https://fakestoreapi.com/products')
             <p><span class="fw-bold">Ratings: <span>${product.rating.rate}, </span></span>
             <span class="fw-bold">${product.rating.count} <span>Sold</span></span></p>
             <p><span class="fw-bold">Price: <span>${product.price}, </span></span></p>
-            <a href="./single-product.html?productId=${product.id}" class="btn btn-lg btn-primary justify-content-center d-flex">View Details</a>
+            <a href="./single-product.html?productId=${product.id}" class="btn btn-primary mt-3 rounded mx-auto d-grid gap-2 col-8 col-lg-6 d-block">View Details</a>
           </div>
         </div>`;
 
