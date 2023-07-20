@@ -1,33 +1,53 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const productId = urlParams.get('productId');
+let product;
 
-fetch(`https://fakestoreapi.com/products/${productId}`)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
+const fetchProduct = async () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const productId = urlParams.get('productId');
 
-    const productImage = document.getElementById('product-image');
-    productImage.src = data.image;
+  const res = await fetch(`https://fakestoreapi.com/products/${productId}`);
+  product = await res.json();
 
-    const productId = document.getElementById('product-id');
-    productId.textContent = data.id;
+  console.log(product)
 
-    const productCategory = document.getElementById('product-category');
-    productCategory.textContent = data.category;
+  const productImage = document.getElementById('product-image');
+  productImage.src = product.image;
 
-    const productPrice = document.getElementById('product-price');
-    productPrice.textContent = data.price;
+  const productCategory = document.getElementById('product-category');
+  productCategory.textContent = product.category;
 
-    const productDescription = document.getElementById('product-description');
-    productDescription.textContent = data.description;
+  const productPrice = document.getElementById('product-price');
+  productPrice.textContent = product.price;
 
-    const productTitle = document.getElementById('product-title');
-    productTitle.textContent = (data.title);
+  const productDescription = document.getElementById('product-description');
+  productDescription.textContent = product.description;
 
-    const productRating = document.getElementById('product-rating');
-    productRating.textContent = data.rating.rate;
+  const productTitle = document.getElementById('product-title');
+  productTitle.textContent = (product.title);
 
-    const productSold = document.getElementById('product-count');
-    productSold.textContent = data.rating.count;
-});
+  const productRating = document.getElementById('product-rating');
+  productRating.textContent = product.rating.rate;
+
+  const productSold = document.getElementById('product-count');
+  productSold.textContent = product.rating.count;
+}
+
+fetchProduct();
+
+function addToCart() {
+  alert('ADDED')
+  const cartItem = {
+    id: product.id,
+    title: product.title,
+    price: product.price
+  }; 
+  const currentCartItems = JSON.parse(localStorage.getItem('cart'));
+  console.log(currentCartItems)
+  if (!currentCartItems || currentCartItems.length === 0 ) {
+    localStorage.setItem('cart', JSON.stringify([cartItem]));
+  } else {
+    localStorage.setItem('cart', JSON.stringify([...currentCartItems, cartItem]));
+  }
+ 
+  updateCart();
+}
