@@ -55,3 +55,9 @@ fetch('https://fakestoreapi.com/products')
         productContainer.appendChild(productDiv);
     }
   });
+
+	$(document).ready(function(){
+    $("#myModal").modal('show');
+	});
+
+  myModal.hide()
