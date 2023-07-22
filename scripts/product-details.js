@@ -35,7 +35,7 @@ const fetchProduct = async () => {
 fetchProduct();
 
 function addToCart() {
-  alert('ADDED')
+  // alert('ADDED')
   const cartItem = {
     id: product.id,
     title: product.title,
