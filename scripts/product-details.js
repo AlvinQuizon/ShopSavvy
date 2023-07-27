@@ -30,6 +30,7 @@ const fetchProduct = async () => {
 
   const productSold = document.getElementById('product-count');
   productSold.textContent = product.rating.count;
+
 }
 
 fetchProduct();
@@ -39,7 +40,8 @@ function addToCart() {
   const cartItem = {
     id: product.id,
     title: product.title,
-    price: product.price
+    price: product.price,
+    image: product.image,
   }; 
   const currentCartItems = JSON.parse(localStorage.getItem('cart'));
   console.log(currentCartItems)
