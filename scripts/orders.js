@@ -28,9 +28,12 @@ for (let product of currentCartItems) {
                 Quantity: 1
             </div>
             <button class="buy-again-button button-primary">
-                <img class="buy-again-icon" src="images/icons/buy-again.png">
+                <img class="buy-again-icon" src="icons/buy-again.png">
                 <span class="buy-again-message">Buy it again</span>
             </button>
+            </div>
+            <div>
+              <a href="./product-details.html?productId=${product.id}" class="btn btn-warning col align-self-end mt-3 rounded-pill mx-auto d-grid gap-2 col-8 col-lg-12 d-block">View Details</a>
             </div>
             
         </div>
