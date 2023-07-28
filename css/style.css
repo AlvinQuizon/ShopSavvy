@@ -3,7 +3,7 @@
 body {
   font-family: "poppins", sans-serif;
   color: #101010;
-  background-color: #f3dbb7;
+  background-color: #F0F8FF;
   padding: 0;
 }
 
@@ -105,8 +105,6 @@ a:focus {
 }
 .img-box {
   transition: transform .2s;
-}
-.slider_section .img-box img {
 }
 
 .slider_section .detail-box {
@@ -445,8 +443,11 @@ a:focus {
   border-radius: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
+} 
+.contactinput { 
+  padding: 27px;
+  width: 300px;
 }
-
 .gift_section .detail-box .btn-box .btn2:hover {
   background-color: transparent;
   color: #3f2102;
@@ -454,7 +455,7 @@ a:focus {
 }
 
 .contact_section {
-  position: relative;
+  position: relative; 
 }
 
 .contact_section .container-bg {
@@ -470,22 +471,25 @@ a:focus {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  background-color: #ffffff;
 }
 
 .contact_section form {
   padding-right: 35px;
   padding: 45px 20px;
+  background-color: #ffffff;
 }
 
 .contact_section input {
-  width: 100%;
+  width: 400px;
   border: 1px solid #919191;
   height: 50px;
+  padding: 30px;
   margin-bottom: 25px;
   padding-left: 25px;
-  background-color: transparent;
+  background-color: whitesmoke;
   outline: none;
-  color: #101010;
+  color: #000000;
 }
 
 .contact_section input::-webkit-input-placeholder {
@@ -521,9 +525,21 @@ a:focus {
   color: #fff;
   margin: 35px auto 0 auto;
 }
-
+button {
+  display: inline-block;
+  background-color: #F28322;
+  color: #ffffff;
+  border: 1px solid #F28322;
+  border-radius: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: block;
+  color: #fff;
+  height: 50px;
+  box-shadow: #000000;
+}
 .contact_section button:hover {
-  background-color: transparent;
+  background-color: whitesmoke;
   color: #F28322;
 }
 
@@ -546,6 +562,7 @@ a:focus {
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
   padding: 25px;
+  background-color: #ffffff;
 }
 
 .client_section .box .client_info {
@@ -559,12 +576,12 @@ a:focus {
 
 .client_section .box .client_info .client_name h5 {
   font-weight: 600;
-  color: #ddb618;
+  color: #000000;
 }
 
 .client_section .box .client_info .client_name h6 {
   margin-bottom: 0;
-  color: #bfc0c0;
+  color: #f37d08;
   font-weight: normal;
   font-size: 15px;
 }
@@ -643,7 +660,7 @@ a:focus {
   outline: none;
   border: none;
   color: #ffffff;
-  background: #F28322;
+  background: #ffffff;
   margin-top: 15px;
   text-transform: uppercase;
   transition: 1.2s;
@@ -689,7 +706,21 @@ a:focus {
   margin-right: 5px;
   font-size: 18px;
 }
-
+.info_section .info_form form button {
+  padding: 8px 35px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background: #F28322;
+  margin-top: 15px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 100%;
+}
+.info_section .info_form form button:hover {
+  scale: (1.2);
+  background-color: #633813;
+}
 .info_section .info_link-box a span {
   color: #cbc9c9;
 }
@@ -716,6 +747,9 @@ a:focus {
 .footer_section a {
   color: #cbc9c9;
 }
-
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */

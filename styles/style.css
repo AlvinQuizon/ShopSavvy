@@ -5,7 +5,7 @@
 }
 body{
     height: 100vh;
-    margin: 0;
+   margin: 0;
     padding: 0;
     background: transparent;
     overflow: hidden;
@@ -182,7 +182,6 @@ form input{
     outline: none;
     padding: 0 5px;
     box-shadow: -3px 6px 4px black;
-    background-color: ;
     color: #000000;
 }
 form button{
